@@ -46,16 +46,39 @@ class Song:
         return self._beat
 
 def HBD(n):
-    octave = 4
-    clock = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    octave = 3
     note = ['g', 'g', 'a', 'g', 'c', 'b', 'g', 'g', 'a', 'g', 'd', 'c', 'g', 'g', 'g', 'e', 'c', 'b', 'a', 'f', 'f', 'e', 'c', 'd', 'c']
     beat = ['quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter', 'quarter']
     for k in range(0, len(note)):
         n.play(octave, note[k], beat[k])
+    
+def mission_impossible(n):
+    oct = 3
+    n.play(oct, "g", "half")
+    n.play(oct, "g", "half")
+    n.play(oct+1, "a#", "quarter")
+    n.play(oct+1, "c", "quarter")
+    n.play(oct, "g", "half")
+    n.play(oct, "g", "half")
+    n.play(oct, "f", "quarter")
+    n.play(oct,  "f#", "quarter")
+    n.play(oct, "g", "half")
+    n.play(oct, "g", "half")
+    n.play(oct+1, "a#", "quarter")
+    n.play(oct+1, "c", "quarter")
+    n.play(oct, "g", "half")
+    n.play(oct, "g", "half")
+    n.play(oct, "f", "quarter")
+    n.play(oct,  "f#", "quarter")
 
 def main():
     n = Note()    
     HBD(n)
+    
+    #mission_impossible(n)
+    #n.play()
+    #mission_impossible()    
+    #time.sleep(.4)
         
 if __name__ == '__main__':    
     main()
