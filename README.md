@@ -6,4 +6,4 @@ Description is collection of beep music using bash script
 * Beep Mission Impossible
 
 ## License
-Webneena license.
+Codeinsane license.
